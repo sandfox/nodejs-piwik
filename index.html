@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Nodejs-piwik by fvdm</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Nodejs-piwik</h1>
+        <p>Access a Piwik API from node.js</p>
+        <p class="view"><a href="https://github.com/fvdm/nodejs-piwik">View the Project on GitHub <small>fvdm/nodejs-piwik</small></a></p>
+        <ul>
+          <li><a href="https://github.com/fvdm/nodejs-piwik/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/fvdm/nodejs-piwik/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/fvdm/nodejs-piwik">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>nodejs-piwik</h1>
+
+<p>This a <a href="http://nodejs.org/">node.js</a> module to access a Piwik API.</p>
+
+<h2>Installation</h2>
+
+<h3>From NPM</h3>
+
+<p><strong>npm install piwik</strong></p>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">piwik</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'piwik'</span><span class="p">);</span>
+</pre>
+</div>
+
+
+<h3>From source</h3>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">piwik</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./piwik.js'</span><span class="p">);</span>
+</pre>
+</div>
+
+
+<h2>Setup</h2>
+
+<p>You need to run <strong>setup()</strong> first in order to use this module.</p>
+
+<p><strong>setup( baseURL, [token] )</strong></p>
+
+<ul>
+<li>
+<strong>baseURL</strong> - required - The URL to your Piwik installation. Both HTTP and HTTPS are supported.</li>
+<li>
+<strong>token</strong> - optional - Your API access token. Either set <em>token</em> or include <em>token_auth</em> in the <em>baseURL</em>.</li>
+</ul><div class="highlight">
+<pre><span class="nx">piwik</span><span class="p">.</span><span class="nx">setup</span><span class="p">(</span> <span class="s1">'https://example.tld/path/to/piwik/'</span><span class="p">,</span> <span class="s1">'abcd1234'</span> <span class="p">);</span>
+</pre>
+</div>
+
+
+<h2>Usage</h2>
+
+<p>To get or set data use the <strong>api()</strong> function. It returns the parsed JSON object as received from the API. Check out the <a href="http://piwik.org/docs/analytics-api/reference/">Piwik API Reference</a> for methods.</p>
+
+<p><strong>method</strong> - this variable is required to set the method.</p>
+
+<div class="highlight">
+<pre><span class="c1">// page urls for today</span>
+<span class="nx">piwik</span><span class="p">.</span><span class="nx">api</span><span class="p">({</span>
+  <span class="nx">method</span><span class="o">:</span>   <span class="s1">'Actions.getPageUrls'</span><span class="p">,</span>
+  <span class="nx">idSite</span><span class="o">:</span>   <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">period</span><span class="o">:</span>   <span class="s1">'day'</span><span class="p">,</span>
+  <span class="nx">date</span><span class="o">:</span>     <span class="s1">'today'</span>
+<span class="p">},</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="p">);</span>
+</pre>
+</div>
+
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/fvdm">fvdm</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-3580504-57");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
