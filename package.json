@@ -3,7 +3,7 @@
   "contributors": [
     "James Butler <james.butler@sandfox.co.uk> (http://blog.sandfox.co.uk/)"
   ],
-  "name": "piwik",
+  "name": "piwik-client",
   "keywords" : [
     "piwik",
     "api",
