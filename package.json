@@ -1,18 +1,32 @@
 {
   "author": "Franklin van de Meent <fr@nkl.in> (http://frankl.in/)",
+  "contributors": [
+    "James Butler <james.butler@sandfox.co.uk> (http://blog.sandfox.co.uk/)"
+  ],
   "name": "piwik",
+  "keywords" : [
+    "piwik",
+    "api",
+    "analytics"
+  ],
   "description": "Access a Piwik API from node.js",
-  "version": "0.1.0",
-  "homepage": "http://fvdm.github.com/nodejs-piwik",
+  "version": "0.2.0",
+  "homepage": "https://github.com/sandfox/aws-arn-parser",
+  "bugs": "https://github.com/sandfox/aws-arn-parser/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fvdm/nodejs-piwik.git"
+    "url": "git://github.com/sandfox/nodejs-piwik.git"
   },
-  "main": "piwik.js",
+  "directories" : {
+    "lib" : "lib"
+    },
+  "main": "lib/PiwikClient.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "coffee-script" : "1.3.x"
+    },
   "optionalDependencies": {},
   "engines": {
-    "node": "*"
+    "node": ">=0.4.0"
   }
 }
