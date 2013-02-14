@@ -1,7 +1,8 @@
 {
   "author": "Franklin van de Meent <fr@nkl.in> (http://frankl.in/)",
   "contributors": [
-    "James Butler <james.butler@sandfox.co.uk> (http://blog.sandfox.co.uk/)"
+    "James Butler <james.butler@sandfox.co.uk> (http://blog.sandfox.co.uk/)",
+    "Fabian Becker <halfdan@xnorfz.de> (http://geekmonkey.org)"
   ],
   "name": "piwik-client",
   "keywords" : [
@@ -10,7 +11,7 @@
     "analytics"
   ],
   "description": "Access a Piwik API from node.js",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/sandfox/nodejs-piwik",
   "bugs": "https://github.com/sandfox/nodejs-piwik/issues",
   "repository": {
