@@ -57,11 +57,11 @@ class PiwikClient
 					try
 						resObj = JSON.parse data
 						if resObj.result is 'error'
-							cb resObj.message
-						else
-							cb null, resObj
+							return cb resObj.message, null
+							
+						cb null, resObj
 					catch error
-						cb error.message
+						cb error.message, null
 
 #ready
 module.exports = PiwikClient
