@@ -12,11 +12,11 @@ class PiwikClient
 		switch url.protocol
 			when 'http:'
 				@http = require 'http'
-				@settings.apiport ? url.port or 80
+				@settings.apiport = url.port or 80
 
 			when 'https:'
 				@http = require 'https'
-				@settings.apiport ? url.port or 443
+				@settings.apiport = url.port or 443
 
 
 		#token in baseURL?
