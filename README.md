@@ -20,7 +20,7 @@ myClient.api({
   idSite:   1,
   period:   'day',
   date:     'today'
-}, (err, responseObject) {
+}, function (err, responseObject) {
 	//Code etc etc
 });
 ```
